@@ -6,7 +6,8 @@ namespace Task_Tracker.Repositories
     {
         Task<IEnumerable<TaskModel>> GetAllTasks();
         Task<TaskModel> GetTaskById(int taskId);
-        Task<bool> UpdateTask(int taskId, string taskName);
+        Task<bool> UpdateTask(int taskId, string taskName, bool isCompleted);
         Task<bool> DeleteTask(int taskId);
+        Task<TaskModel> AddTask(TaskModel task);
     }
 }
